@@ -14,7 +14,7 @@ RUN --mount=type=cache,target=/usr/src/app/.npm \
 COPY ui /ui
 RUN npm run build
 
-FROM alpine
+FROM alpine:3.20.3
 LABEL org.opencontainers.image.title="Kubernetes Sample" \
     org.opencontainers.image.description="This is a sample Docker Extension that shows how to interact with a Kubernetes cluster by shipping the kubectl command line too to read the kubeconfig file from your host filesystem." \
     org.opencontainers.image.vendor="Docker" \
